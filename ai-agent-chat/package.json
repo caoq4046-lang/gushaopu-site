@@ -1,0 +1,32 @@
+{
+  "name": "ai-agent-chat",
+  "version": "1.0.0",
+  "description": "AI Agent 聊天桌面应用：多工作区 · 多模型接口 · ADB 面板 · Vibe Coding",
+  "main": "main.js",
+  "author": "Gushaopu",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron .",
+    "preview": "node preview.js",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder --linux AppImage --x64"
+  },
+  "build": {
+    "appId": "com.gushaopu.aichat",
+    "productName": "AI Agent Chat",
+    "files": [
+      "main.js",
+      "preload.js",
+      "renderer/**/*",
+      "package.json"
+    ],
+    "linux": {
+      "target": ["AppImage"],
+      "category": "Utility"
+    }
+  },
+  "devDependencies": {
+    "electron": "^31.0.0",
+    "electron-builder": "^24.13.3"
+  }
+}
